@@ -1,1 +1,0 @@
-C:\Users\nagai\Music\Enterprise Management\Group_Project\WeatherNotification\WeatherNotification\WeatherNotification.csproj;x64
