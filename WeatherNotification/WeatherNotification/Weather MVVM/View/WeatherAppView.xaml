@@ -11,5 +11,10 @@
                        BackgroundColor="White"
                        TextColor="Black"/>
         </Grid>
+        <VerticalStackLayout Grid.Row="1" Style="{StaticResource MainPageStackLayout}">
+            <Label Text="Sudbury Ontario" Style="{StaticResource LabelFontSize}"/>
+            <Label Text="November 24, 2023"/>
+
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>
