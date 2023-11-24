@@ -1,1 +1,1 @@
-C:\Users\hp\source\repos\WeatherNotification-App\WeatherNotification\WeatherNotification\WeatherNotification.csproj;x64
+C:\Users\nagai\Music\Enterprise Management\Group_Project\WeatherNotification\WeatherNotification\WeatherNotification.csproj;x64

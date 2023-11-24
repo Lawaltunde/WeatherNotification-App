@@ -155,3 +155,12 @@ maui.aar
 Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
 Xamarin.Google.Crypto.Tink.Android.aar
+SkiaSharp.dll
+SkiaSharp.Extended.UI.dll
+SkiaSharp.SceneGraph.dll
+SkiaSharp.Skottie.dll
+SkiaSharp.Views.Android.dll
+SkiaSharp.Views.Maui.Controls.dll
+SkiaSharp.Views.Maui.Core.dll
+SkiaSharp.Extended.UI.aar
+SkiaSharp.Views.Android.aar

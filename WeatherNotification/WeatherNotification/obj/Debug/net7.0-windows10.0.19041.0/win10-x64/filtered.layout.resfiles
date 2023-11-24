@@ -57,3 +57,10 @@ splashSplashScreen.scale-150.png
 splashSplashScreen.scale-200.png
 splashSplashScreen.scale-400.png
 AboutAssets.txt
+Cloudy.json
+Partly-Cloudy.json
+Partly-shower.json
+Snow-Sunny.json
+Storm.json
+Sunny.json
+Thunder.json

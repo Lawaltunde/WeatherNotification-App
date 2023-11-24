@@ -49,7 +49,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Raw\Cloudy.json" />
+	  <None Remove="Resources\Raw\Partly-Cloudy.json" />
+	  <None Remove="Resources\Raw\Partly-shower.json" />
+	  <None Remove="Resources\Raw\Snow-Sunny.json" />
+	  <None Remove="Resources\Raw\Storm.json" />
+	  <None Remove="Resources\Raw\Sunny.json" />
+	  <None Remove="Resources\Raw\Thunder.json" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.86" />
 	</ItemGroup>
 
 	<ItemGroup>
