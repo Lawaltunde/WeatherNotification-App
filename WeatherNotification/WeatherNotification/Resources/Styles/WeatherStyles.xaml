@@ -19,5 +19,13 @@
         <Setter Property="FontSize" Value="Large"/>
         <Setter Property="FontAttributes" Value="Bold"/>
     </Style>
+    
+    <?Need to change FontFamily value later after adding another font to the resource?>
+    <Style x:Key="WeatherTitle" TargetType="Label">
+        <Setter Property="FontFamily" Value="San-Serf"/>
+    </Style>
+    <Style x:Key="WeatherValue" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
 
 </ResourceDictionary>
