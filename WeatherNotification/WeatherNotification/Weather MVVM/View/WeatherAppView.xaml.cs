@@ -9,4 +9,9 @@ public partial class WeatherAppView : ContentPage
 		InitializeComponent();
 		BindingContext = new WeatherAppViewModels();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+		//To do
+    }
 }

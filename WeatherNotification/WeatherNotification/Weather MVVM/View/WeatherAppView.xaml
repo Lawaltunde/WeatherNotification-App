@@ -34,9 +34,13 @@
 
             <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="10">
                 <Label Text="Weather" />
-            <Label Text="Snowing" Style="{StaticResource WeatherValue}"/>
+                <Label Text="Snowing" Style="{StaticResource WeatherValue}"/>
             </VerticalStackLayout>
-
         </Grid>
+        <VerticalStackLayout Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center">
+            <Button Text="Click To Add Event Date" Style="{StaticResource EventButton}"
+                    Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+        
     </Grid>
 </ContentPage>
