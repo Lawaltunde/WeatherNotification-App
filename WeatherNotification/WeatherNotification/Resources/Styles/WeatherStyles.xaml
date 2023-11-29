@@ -41,11 +41,11 @@
     <?Style properties for the last row(cards) on the main page?>
         <Style x:Key="LastRow" TargetType="Frame">
         <Setter Property="Padding" Value="0"/>
-        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Margin" Value="20"/>
         <Setter Property="BackgroundColor" Value="{StaticResource CardBlue}"/>
         <Setter Property="CornerRadius" Value="25"/>
         <Setter Property="HeightRequest" Value="130"/>
-        <Setter Property="WidthRequest" Value="150"/>
+        <Setter Property="WidthRequest" Value="130"/>
         <Setter Property="BorderColor" Value="Transparent"/>
     </Style>
 
