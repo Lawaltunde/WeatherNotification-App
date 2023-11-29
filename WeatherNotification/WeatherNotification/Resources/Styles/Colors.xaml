@@ -42,5 +42,6 @@
     <Color x:Key="Blue300Accent">#A7CBF6</Color>
 
     <Color x:Key="DarkBlue">#060723</Color>
+    <Color x:Key="CardBlue">#80912a</Color>
 
 </ResourceDictionary>
