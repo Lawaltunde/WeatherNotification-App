@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyChanged;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,12 @@ using WeatherNotification.Weather_MVVM.Models;
 
 namespace WeatherNotification.Weather_MVVM.ViewModels
 {
+    [AddINotifyPropertyChangedInterface]
     public class WeatherAppViewModels
     {
         public WeatherAppData WeatherAppData { get; set; }
+        public string PlaceName { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
         private HttpClient client;
 
         public WeatherAppViewModels()
@@ -22,7 +26,7 @@ namespace WeatherNotification.Weather_MVVM.ViewModels
         public ICommand SearchCommand =>
             new Command(async (searchText) =>
             {
-
+                PlaceName = searchText.ToString();
                 var location = new Location
                 {
                     Latitude = 43.4668, //  predefined latitude

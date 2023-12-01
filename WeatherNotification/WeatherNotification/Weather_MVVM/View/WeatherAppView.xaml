@@ -16,8 +16,8 @@
                        TextColor="Black"/>
         </Grid>
         <VerticalStackLayout Grid.Row="1" Style="{StaticResource MainPageStackLayout}">
-            <Label Text="Sudbury Ontario" Style="{StaticResource LabelFontSize}"/>
-            <Label Text="November 24, 2023"/>
+            <Label Text="Sudbury, Ontario" Style="{StaticResource LabelFontSize}"/>
+            <Label Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}"/>
         </VerticalStackLayout>
         <skia:SKLottieView
             Grid.Row="2"
