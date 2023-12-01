@@ -42,14 +42,15 @@
                     Clicked="Button_Clicked"/>
         </VerticalStackLayout>
 
-        <CollectionView Grid.Row="5">
+        <CollectionView Grid.Row="5" HorizontalOptions="Center">
             <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
+                <x:Array Type="{x:Type x:String}" >
                     <x:String>1</x:String>
                     <x:String>2</x:String>
                     <x:String>3</x:String>
                     <x:String>4</x:String>
                     <x:String>5</x:String>
+                    
                 </x:Array>
             </CollectionView.ItemsSource>
 
