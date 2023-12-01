@@ -8,6 +8,9 @@
         <Grid>
             <Frame/>
             <SearchBar VerticalOptions="Center" 
+                       x:Name="searchBar"
+                       SearchCommand="{Binding SearchCommand}"
+                       SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
                        Placeholder="Search for city" 
                        BackgroundColor="White"
                        TextColor="Black"/>

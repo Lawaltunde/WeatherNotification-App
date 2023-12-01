@@ -27,7 +27,7 @@
     <MauiXaml Update="Resources\Styles\WeatherStyles.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Weather MVVM\View\WeatherAppView.xaml">
+    <MauiXaml Update="Weather_MVVM\View\WeatherAppView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>
