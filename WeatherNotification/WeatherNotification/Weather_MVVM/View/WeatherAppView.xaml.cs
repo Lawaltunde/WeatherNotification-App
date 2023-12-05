@@ -7,7 +7,7 @@ public partial class WeatherAppView : ContentPage
 	public WeatherAppView()
 	{
 		InitializeComponent();
-		BindingContext = new WeatherAppViewModels();
+		BindingContext = new WeatherViewModel();
 	}
 
     private void Button_Clicked(object sender, EventArgs e)

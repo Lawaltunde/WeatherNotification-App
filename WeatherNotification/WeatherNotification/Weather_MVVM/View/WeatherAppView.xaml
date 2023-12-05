@@ -16,8 +16,8 @@
                        TextColor="Black"/>
         </Grid>
         <VerticalStackLayout Grid.Row="1" Style="{StaticResource MainPageStackLayout}">
-            <Label Text="Sudbury, Ontario" Style="{StaticResource LabelFontSize}"/>
-            <Label Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}"/>
+            <Label Text="{Binding PlaceName}" Style="{StaticResource LabelFontSize}"/>
+            <Label Text="{Binding GetDate, StringFormat='{}{0:dd/MM/yyyy}'}" />
         </VerticalStackLayout>
         <skia:SKLottieView
             Grid.Row="2"
@@ -27,17 +27,17 @@
         <Grid Grid.Row="3" ColumnDefinitions="*, *, *">
             <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
                 <Label Text="Temp" />
-                <Label Text="-20°" Style="{StaticResource WeatherValue}"/>
+                <Label Text="{Binding WeatherAppData.current_weather.temperature, StringFormat='{0}°C'}" Style="{StaticResource WeatherValue}"/>
             </VerticalStackLayout >
 
             <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" Spacing="10">
             <Label Text="Wind" />
-            <Label Text="7.2km/hr" Style="{StaticResource WeatherValue}"/>
+                <Label Text="{Binding WeatherAppData.current_weather.windspeed, StringFormat='{0}Km/h'}" Style="{StaticResource WeatherValue}"/>
             </VerticalStackLayout>
 
             <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="10">
                 <Label Text="Weather" />
-                <Label Text="Snowing" Style="{StaticResource WeatherValue}"/>
+                <Label Text="{Binding WeatherAppData.current_weather.weathercode}"/>
             </VerticalStackLayout>
         </Grid>
         <VerticalStackLayout Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center">
