@@ -15,6 +15,8 @@ namespace WeatherNotification.Weather_MVVM.Models
         public string temperature_2m_min { get; set; }
     }
 
+    //Getting current time, weather_code, min and max temperature from open-meteo
+
     public class Daily
     {
         public string[] time { get; set; }
