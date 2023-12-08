@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DriverLogBook.NewPage1"
+             Title="NewPage1">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- These are text blocks that display the driver's information -->
+        <Label Text="Date:" Grid.Row="0" Grid.Column="0"/>
+        <Label Text="12/5/2023" Grid.Row="0" Grid.Column="1"/>
+        <Label Text="Total distance:" Grid.Row="1" Grid.Column="0"/>
+        <Label Text="$500" Grid.Row="1" Grid.Column="1"/>
+        <Label Text="Vehicle ID:" Grid.Row="2" Grid.Column="0"/>
+        <Label Text="9999" Grid.Row="2" Grid.Column="1"/>
+        <Label Text="Carrier:" Grid.Row="3" Grid.Column="0"/>
+        <Label Text="None" Grid.Row="3" Grid.Column="1"/>
+        <Label Text="Driver:" Grid.Row="4" Grid.Column="0"/>
+        <Label Text="Olumide" Grid.Row="4" Grid.Column="1"/>
+        <Label Text="Co-driver:" Grid.Row="5" Grid.Column="0"/>
+        <Label Text="Tunde" Grid.Row="5" Grid.Column="1"/>
+        <Label Text="Main office:" Grid.Row="6" Grid.Column="0"/>
+        <Label Text="Ontario" Grid.Row="6" Grid.Column="1"/>
+        <Label Text="Shipping document:" Grid.Row="7" Grid.Column="0"/>
+        <Label Text="2345" Grid.Row="7" Grid.Column="1"/>
+    </Grid>
+</ContentPage>

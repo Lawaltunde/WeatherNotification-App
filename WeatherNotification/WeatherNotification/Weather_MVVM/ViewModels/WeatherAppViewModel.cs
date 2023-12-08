@@ -20,7 +20,7 @@ namespace WeatherNotification.Weather_MVVM.ViewModels
         public WeatherAppData WeatherAppData { get; set; }
         private HttpClient _httpClient;
         public string PlaceName { get; set; }
-        public DateTime GetDate = DateTime.Now;
+        public DateTime GetDate { get; set; } = DateTime.Now;
 
         public WeatherViewModel() { 
             _httpClient = new HttpClient();
@@ -61,8 +61,7 @@ namespace WeatherNotification.Weather_MVVM.ViewModels
                 Console
                      .WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
             return location;
-
-           
+        
 
         }
     }
