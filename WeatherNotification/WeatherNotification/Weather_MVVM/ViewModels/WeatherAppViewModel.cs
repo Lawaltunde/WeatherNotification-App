@@ -18,7 +18,7 @@ namespace WeatherNotification.Weather_MVVM.ViewModels
     {
         
         public WeatherAppData WeatherAppData { get; set; }
-        private HttpClient _httpClient;
+        private readonly HttpClient _httpClient;
         public string PlaceName { get; set; }
         public DateTime GetDate { get; set; } = DateTime.Now;
 
@@ -42,12 +42,10 @@ namespace WeatherNotification.Weather_MVVM.ViewModels
 
             if (response.IsSuccessStatusCode)
             {
-                using (var responseStream = await response.Content.ReadAsStreamAsync())
-                {
-                    var data = await JsonSerializer
-                         .DeserializeAsync<WeatherAppData>(responseStream);
-                    WeatherAppData = data;
-                }
+                using var responseStream = await response.Content.ReadAsStreamAsync();
+                var data = await JsonSerializer
+                     .DeserializeAsync<WeatherAppData>(responseStream);
+                WeatherAppData = data;
             }
         }
         private async Task<Location> GetCoordinatesAsync(string address)
