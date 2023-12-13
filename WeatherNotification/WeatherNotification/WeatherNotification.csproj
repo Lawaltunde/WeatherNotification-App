@@ -65,16 +65,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Fody" Version="6.8.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
 		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.86" />
+<<<<<<< HEAD
+=======
+		<PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+>>>>>>> 5a1dda8b5727501ffecd6c1d6dfa27d3bb1b1ce2
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Resources\Styles\WeatherStyles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Weather MVVM\View\WeatherAppView.xaml">
+	  <MauiXaml Update="Weather_MVVM\View\WeatherAppView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

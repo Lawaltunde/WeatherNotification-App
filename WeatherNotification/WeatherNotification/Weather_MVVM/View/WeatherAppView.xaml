@@ -2,7 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WeatherNotification.Weather_MVVM.View.WeatherAppView"
+<<<<<<< HEAD:WeatherNotification/WeatherNotification/Weather MVVM/View/WeatherAppView.xaml
              xmlns:serviceData="clr-namespace:WeatherNotification.ServiceData"
+=======
+             xmlns:vm="clr-namespace:WeatherNotification.Weather_MVVM.ViewModels"
+>>>>>>> 5a1dda8b5727501ffecd6c1d6dfa27d3bb1b1ce2:WeatherNotification/WeatherNotification/Weather_MVVM/View/WeatherAppView.xaml
              xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              Title="WeatherAppView">
     <ContentPage.Resources>
@@ -12,7 +16,11 @@
     <Grid Margin="15" RowDefinitions=".15*, .1*, .5*, .1*, .1*, .3*">
         <Grid>
             <Frame/>
+<<<<<<< HEAD:WeatherNotification/WeatherNotification/Weather MVVM/View/WeatherAppView.xaml
             <SearchBar VerticalOptions="Center"
+=======
+            <SearchBar VerticalOptions="Center" 
+>>>>>>> 5a1dda8b5727501ffecd6c1d6dfa27d3bb1b1ce2:WeatherNotification/WeatherNotification/Weather_MVVM/View/WeatherAppView.xaml
                        x:Name="searchBar"
                        SearchCommand="{Binding SearchCommand}"
                        SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
@@ -22,7 +30,11 @@
         </Grid>
         <VerticalStackLayout Grid.Row="1" Style="{StaticResource MainPageStackLayout}">
             <Label Text="{Binding PlaceName}" Style="{StaticResource LabelFontSize}"/>
+<<<<<<< HEAD:WeatherNotification/WeatherNotification/Weather MVVM/View/WeatherAppView.xaml
             <Label Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}"/>
+=======
+            <Label Text="{Binding GetDate, StringFormat='{}{0:dd/MM/yyyy}'}" />
+>>>>>>> 5a1dda8b5727501ffecd6c1d6dfa27d3bb1b1ce2:WeatherNotification/WeatherNotification/Weather_MVVM/View/WeatherAppView.xaml
         </VerticalStackLayout>
         <skia:SKLottieView
             Grid.Row="2"
@@ -32,17 +44,29 @@
         <Grid Grid.Row="3" ColumnDefinitions="*, *, *">
             <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
                 <Label Text="Temp" />
+<<<<<<< HEAD:WeatherNotification/WeatherNotification/Weather MVVM/View/WeatherAppView.xaml
                 <Label Text="{Binding _weatherData.current.temperature_2m, StringFormat='{0}°C'}" Style="{StaticResource WeatherValue}"/>
+=======
+                <Label Text="12°C" Style="{StaticResource WeatherValue}"/>
+>>>>>>> 5a1dda8b5727501ffecd6c1d6dfa27d3bb1b1ce2:WeatherNotification/WeatherNotification/Weather_MVVM/View/WeatherAppView.xaml
             </VerticalStackLayout >
 
             <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" Spacing="10">
             <Label Text="Wind" />
+<<<<<<< HEAD:WeatherNotification/WeatherNotification/Weather MVVM/View/WeatherAppView.xaml
                 <Label Text="{Binding _weatherData.current.wind_speed_10m, StringFormat='{0}Km/h'}" Style="{StaticResource WeatherValue}"/>
+=======
+                <Label Text="{Binding WeatherAppData.current_weather.windspeed, StringFormat='{0}Km/h'}" Style="{StaticResource WeatherValue}"/>
+>>>>>>> 5a1dda8b5727501ffecd6c1d6dfa27d3bb1b1ce2:WeatherNotification/WeatherNotification/Weather_MVVM/View/WeatherAppView.xaml
             </VerticalStackLayout>
 
             <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="10">
                 <Label Text="Weather" />
+<<<<<<< HEAD:WeatherNotification/WeatherNotification/Weather MVVM/View/WeatherAppView.xaml
                 <Label Text="{Binding _weatherData.current.weather_code, Converter={StaticResource CodeToWeatherAppConverter}}" Style="{StaticResource WeatherValue}"/>
+=======
+                <Label Text="{Binding WeatherAppData.current_weather.weathercode}"/>
+>>>>>>> 5a1dda8b5727501ffecd6c1d6dfa27d3bb1b1ce2:WeatherNotification/WeatherNotification/Weather_MVVM/View/WeatherAppView.xaml
             </VerticalStackLayout>
         </Grid>
         <VerticalStackLayout Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center">
