@@ -9,7 +9,7 @@ namespace WeatherNotification
         {
             InitializeComponent();
 
-            MainPage = new WeatherAppView();
+            MainPage = new AppShell();
         }
     }
 }
