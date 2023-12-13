@@ -15,10 +15,14 @@ namespace WeatherNotification
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                })
+                .ConfigureEssentials(essentials =>
+                    {
+                        essentials.UseMapServiceToken("g8N9nCOT71f7Uv9fdsP5~MzswWLsjP4Re4wljtBTz3g~AiPN3Cf-qVA3DgO9DhzobomFiYBvwkqfQBxAw4mkUQe91VTJ023Loq9_6y0FzDa9");
+                    });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
