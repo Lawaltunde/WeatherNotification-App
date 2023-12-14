@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherNotificationApp.WeatherApp_MVVM.View.WeatherAppView"
+             xmlns:serviceData="clr-namespace:WeatherNotificationApp.ServiceData"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             Title="WeatherAppView">
+
+    <ContentPage.Resources>
+        <serviceData:CodeToWeatherAppConverter x:Key="CodeToWeatherAppConverter"/>
+        <serviceData:CodeToLottieConverter x:Key="CodeToLottieConverter"/>
+    </ContentPage.Resources>
+
+
+
+    <Grid Margin="15" RowDefinitions=".15*, .1*, .5*, .1*, .1*, .3*">
+        <Grid>
+            <Frame/>
+            <SearchBar VerticalOptions="Center" 
+                       x:Name="searchBar"
+                       SearchCommand="{Binding SearchCommand}"
+                       SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+                       Placeholder="Search for city" 
+                       BackgroundColor="White"
+                       TextColor="Black"/>
+        </Grid>
+        <VerticalStackLayout Grid.Row="1" Style="{StaticResource MainPageStackLayout}">
+            <Label Text="{Binding PlaceName}" Style="{StaticResource LabelFontSize}"/>
+            <Label Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}"/>
+        </VerticalStackLayout>
+        <skia:SKLottieView
+            Grid.Row="2"
+            RepeatCount="-1"
+            Source="{Binding _weatherData.current.weather_code, Converter={StaticResource CodeToLottieConverter}}"
+            Margin="0,50,0,0"/>
+        <Grid Grid.Row="3" ColumnDefinitions="*, *, *">
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="Temp" />
+                <Label Text="{Binding _weatherData.current.temperature_2m, StringFormat='{0}°C'}" Style="{StaticResource WeatherValue}"/>
+            </VerticalStackLayout >
+
+            <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" Spacing="10">
+                <Label Text="Wind" />
+                <Label Text="{Binding _weatherData.current.wind_speed_10m, StringFormat='{0}Km/h'}" Style="{StaticResource WeatherValue}"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="10">
+                <Label Text="Weather" />
+                <Label Text="{Binding _weatherData.current.weather_code, Converter={StaticResource CodeToWeatherAppConverter}}" Style="{StaticResource WeatherValue}"/>
+            </VerticalStackLayout>
+        </Grid>
+        <VerticalStackLayout Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center">
+            <Button Text="Click To Add Event Date" Style="{StaticResource EventButton}"/>
+        </VerticalStackLayout>
+
+        <CollectionView Grid.Row="5" ItemsSource="{Binding WeatherAppData.daily2}" HorizontalOptions="Center" >
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Style="{StaticResource LastRow}">
+                        <VerticalStackLayout Spacing="5" VerticalOptions="Center">
+                            <skia:SKLottieView IsAnimationEnabled="False"
+                                        WidthRequest="50"
+                                        HeightRequest="50"
+                                        Source="{StaticResource weathercode CodeToLottieConverter}"/>
+                            <Label Text="{Binding time}" TextColor="{StaticResource Yellow100Accent}"/>
+                            <Label Text="{Binding temperature_2m_max, StringFormat='{0}°C'}"/>
+                            <Label Text="{Binding weathercode, Converter={StaticResource CodeToWeatherAppConverter}}"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    <Style x:Key="MainPageStackLayout" TargetType="VerticalStackLayout">
+        <Setter Property="Margin" Value="0, 10, 0, 0"/>
+        <Setter Property="Spacing" Value="15"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="HorizontalOptions" Value ="Center"/>
+        <Setter Property="VerticalOptions" Value ="Center"/>
+        <Setter Property="TextColor" Value ="{StaticResource White}"/>
+    </Style>
+
+    <Style x:Key="LabelFontSize" TargetType="Label">
+        <Setter Property="FontSize" Value="Large"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <?Need to change FontFamily value later after adding another font to the resource?>
+    <Style x:Key="WeatherTitle" TargetType="Label">
+        <Setter Property="FontFamily" Value="San-Serf"/>
+    </Style>
+    <Style x:Key="WeatherValue" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="EventButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="GreenYellow"/>
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="WidthRequest" Value="250"/>
+        <Setter Property="FontSize" Value="Micro"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <?Style properties for the last row(cards) on the main page?>
+    <Style x:Key="LastRow" TargetType="Frame">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource CardBlue}"/>
+        <Setter Property="CornerRadius" Value="25"/>
+        <Setter Property="HeightRequest" Value="130"/>
+        <Setter Property="WidthRequest" Value="130"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+    </Style>
+
+</ResourceDictionary>
