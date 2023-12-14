@@ -53,7 +53,7 @@
             <Button Text="Click To Add Event Date" Style="{StaticResource EventButton}"/>
         </VerticalStackLayout>
 
-        <CollectionView Grid.Row="5" ItemsSource="{Binding WeatherAppData.daily2}" HorizontalOptions="Center" >
+        <CollectionView Grid.Row="5" ItemsSource="{Binding _weatherData.daily2}" HorizontalOptions="Center" >
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal"/>
             </CollectionView.ItemsLayout>
@@ -64,10 +64,10 @@
                             <skia:SKLottieView IsAnimationEnabled="False"
                                         WidthRequest="50"
                                         HeightRequest="50"
-                                        Source="{StaticResource weathercode CodeToLottieConverter}"/>
+                                        Source="{Binding weather_code, Converter={StaticResource CodeToLottieConverter}}"/>
                             <Label Text="{Binding time}" TextColor="{StaticResource Yellow100Accent}"/>
                             <Label Text="{Binding temperature_2m_max, StringFormat='{0}°C'}"/>
-                            <Label Text="{Binding weathercode, Converter={StaticResource CodeToWeatherAppConverter}}"/>
+                            <Label Text="{Binding weather_code, Converter={StaticResource CodeToWeatherAppConverter}}"/>
                         </VerticalStackLayout>
                     </Frame>
                 </DataTemplate>

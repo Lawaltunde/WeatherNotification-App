@@ -54,7 +54,7 @@ namespace WeatherNotificationApp.WeatherApp_MVVM.ViewModels
                             time = _weatherData.daily.time[i],
                             temperature_2m_max = _weatherData.daily.temperature_2m_max[i],
                             temperature_2m_min = _weatherData.daily.temperature_2m_min[i],
-                            weathercode = _weatherData.daily.weather_code[i]
+                            weather_code = _weatherData.daily.weather_code[i]
                         };
                         //adding the instance to daily2 list
                         _weatherData.daily2.Add(daily2);

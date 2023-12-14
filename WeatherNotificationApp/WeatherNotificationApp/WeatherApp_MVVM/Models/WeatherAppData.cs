@@ -78,7 +78,7 @@ namespace WeatherNotificationApp.WeatherApp_MVVM.Models
     public class Daily2
     {
         public string time { get; set; }
-        public float weathercode { get; set; }
+        public float weather_code { get; set; }
         public float temperature_2m_max { get; set; }
         public float temperature_2m_min { get; set; }
     }
