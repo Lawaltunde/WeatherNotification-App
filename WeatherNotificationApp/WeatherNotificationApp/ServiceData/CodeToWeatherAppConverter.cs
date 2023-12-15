@@ -95,6 +95,9 @@ namespace WeatherNotificationApp.ServiceData
                 case 96:
                 case 99:
                     return "Thunderstorm with slight and heavy hail";
+                case < 0:
+                    return "Negative value";
+
 
                 default: return "Unknown";
             }

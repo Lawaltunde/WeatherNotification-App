@@ -75,5 +75,5 @@ namespace WeatherNotificationApp.WeatherApp_MVVM.ViewModels
                 return location;
             }
         }
-    }
+}
 

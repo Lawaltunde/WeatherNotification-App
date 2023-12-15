@@ -50,7 +50,8 @@
             </VerticalStackLayout>
         </Grid>
         <VerticalStackLayout Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center">
-            <Button Text="Click To Add Event Date" Style="{StaticResource EventButton}"/>
+            <Button Text="Click To Add Event Date" Clicked="Button_Clicked"
+                    Style="{StaticResource EventButton}"/>
         </VerticalStackLayout>
 
         <CollectionView Grid.Row="5" ItemsSource="{Binding _weatherData.daily2}" HorizontalOptions="Center" >

@@ -125,6 +125,10 @@ namespace WeatherNotificationApp.ServiceData
                     lottienImageSource.File = "storm.json";
                     return lottienImageSource;
 
+                case < 0:
+                    lottienImageSource.File = "partly-shower.json";
+                    return lottienImageSource;
+
                 default: return "Unknown";
             }
         }
